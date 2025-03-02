@@ -13,7 +13,7 @@ const sessionConnect = require('connect-mongodb-session')(session)
 const app = express()
 
 const corsOptions = {  // orgin setup to front end 
-    origin: ['http://localhost:7002', 'http://192.168.0.114:7002',"https://3zn7kpnd-7002.inc1.devtunnels.ms"], 
+    origin: ['http://localhost:7002', 'http://192.168.0.114:7002',"https://3zn7kpnd-7002.inc1.devtunnels.ms","http://192.168.0.116:7002"," http://localhost:7002"], 
     credentials: true,
 };
 
@@ -36,11 +36,11 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     store: Store,
-    cookie:{
-        secure: true,
-        httpOnly: true,
-        sameSite: 'none'
-    }
+    // cookie:{
+    //     secure: true,
+    //     httpOnly: true,
+    //     sameSite: 'none'
+    // }
     
 }));
 

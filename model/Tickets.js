@@ -6,7 +6,7 @@ const TicketSchema = new mongoose.Schema(
     UserId: { type: Number, required: true },
     RaisedBy: { type: String, required: true }, // Changed to String for name
     Role: { type: String, required: true },
-    Contact: { type: Number, required: true },
+    Contact: { type: Number },
     Email: { type: String, required: true },
     Description: { type: String, required: true },
     Status: {
